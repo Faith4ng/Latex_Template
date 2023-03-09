@@ -10,35 +10,20 @@
   % 打印类型
   % 单面打印oneside,双面打印twoside
 
-% 宏包
+% 设置
+\input{setup}
 
-\usepackage[inner=2.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
-  % 页边距设置
-  % 上：2.5cm；下：2.5cm；左：2.5cm；右：1cm
-
-%opening
+% 标题
 \title{TITLE}
 \author{AUTHOR}
 \date{\today}
+
+% 正文
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-  % 摘要
-  % Abstract
-\end{abstract}
-
-  % 正文
-page 1.
-
-test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. 
-
-\newpage 
-
-page 2.
-
-test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. test is test. 
+\input{data/chapter01}
 
 \end{document}
