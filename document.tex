@@ -1,7 +1,6 @@
 % !TeX encoding = UTF-8
 % !TeX program = xelatex
 % !TeX spellcheck = none
-
 \documentclass[a4paper, 12pt, twoside]{article}
   % 纸张
   % a4paper, letterpaper
@@ -14,16 +13,21 @@
 \input{setup}
 
 % 标题
-\title{TITLE}
-\author{AUTHOR}
-\date{\today}
+\title{这里是一个标题}
+\author{这里是作者（们）的姓名}
+\date{这里是日期[\today]}
 
 % 正文
-
 \begin{document}
-
 \maketitle
+\input{data/template}
 
-\input{data/chapter01}
+%>>> 参考文献（需手动排序） >>>
+\newpage
+\input{ref/nobib}
+
+%>>> 参考文献（数据库,自动排序,setup中开启gbt7714） >>>
+%\bibliographystyle{gbt7714-numerical}
+%\bibliography{ref/ref}
 
 \end{document}

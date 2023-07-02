@@ -1,0 +1,104 @@
+% !TeX root = ./document.tex
+% !TeX spellcheck = none
+
+\begin{abstract}
+	% 摘要
+	% Abstract
+	
+	这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要，这里是一段摘要。
+	
+	\noindent \textbf{关键字：} 关键字1，关键字2，关键字3,……
+\end{abstract}
+
+\section*{正文结构}
+
+% 正文
+这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段，这里是正文第一段。
+
+\section{这里是第一段}
+
+第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文，第一段正文。
+
+\subsection{这里是第一小段}
+
+第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文，第一小段正文。
+
+\subsubsection{这里是第一小小段}
+
+第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文，第一小小段正文。
+
+\section*{图表示例}
+
+\section{全线表}
+
+\begin{table}[H]
+	\centering
+	\caption{TABLE-A}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		1 & 2 & 3 \\ \hline
+		4 & 5 & 6 \\ \hline
+		7 & 8 & 9 \\ \hline
+	\end{tabular}
+\end{table}
+
+\section{三线表}
+
+\begin{table}[H]
+	\centering
+	\caption{TABLE-B}
+	\begin{tabular}{l|l|l}
+		\hline
+		CHIP & A   & B    \\ \hline
+		AM   & 10  & 8    \\ 
+		GBW  & 80M & 100M \\ \hline
+	\end{tabular}
+\end{table}
+
+\section{单图}
+
+如图(\ref{fig:EXAMPLE-A})所示
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\linewidth]{EXAMPLE-A.png}
+	\caption*{heading}
+	\caption{EXAMPLE-A}
+	\label{fig:EXAMPLE-A}
+\end{figure}
+
+\section{多图}
+
+如图(\ref{subfig:A})和图(\ref{subfig:B})所示
+
+\begin{figure}[H]
+	\centering
+	\subfigure[name of the subfigure\label{subfig:A}]
+		{\includegraphics[width=0.3\linewidth]{EXAMPLE-A.png}}
+	\hspace{0.2\linewidth}
+	\subfigure[name of the subfigure\label{subfig:B}]
+		{\includegraphics[width=0.3\linewidth]{EXAMPLE-B.png}}
+	\caption*{heading}
+	\caption{name of the figure}
+	\label{fig:multi-image}
+\end{figure}
+
+\section*{代码环境}
+
+代码环境，
+
+\begin{lstlisting}[language=C,style=monokai,caption={Hello,world}]
+	#include<stdio.h>
+	
+	int main()
+	{
+		printf{"hello,world!"\n};
+		reutrn 0;
+	}
+\end{lstlisting}
+
+\section*{参考文献索引}
+
+这是第一篇索引\cite{swierad2016ultra}
+
+这是第二篇索引\cite{chen2014compact}
