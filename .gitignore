@@ -2,3 +2,7 @@ document.synctex.gz
 document.aux
 document.log
 document.pdf
+document.fdb_latexmk
+document.fls
+missfont.log
+document.synctex(busy)

@@ -10,20 +10,42 @@
 % 页边距设置
 % 上:2.5cm; 下:2.5cm; 左:2.5cm; 右:1cm
 
+% >>> 中文环境支持>>>
+
 \usepackage{ctex}
 % 支持中文排版，包括字体、标点、章节标题等
 
+% >>> 数学环境支持
+
 \usepackage{amsmath}
 % 数学公式核心宏包，提供了一些增强的数学功能，比如改进的数学环境，数学符号，数学字体等。
+\numberwithin{equation}{section}
+% 公式按章节编号
+\numberwithin{figure}{section}\numberwithin{table}{section}
+% 图表按章节编号
 \usepackage{amssymb}
 % 定义了 amsfonts 宏包里 msam 和 mabm 字库中全部数学符号的命令，可以提供一些 LaTeX 和 AMS 没有的数学符号
 \usepackage{amsfonts}
 % 提供了一些特殊的数学字体，比如欧拉字体，花体字母，黑板粗体等
 \usepackage{newtxtext, newtxmath}
 % 提供了 Timesnew, Palatino 风格的文本和数学字体
-
 \usepackage{siunitx}
 % 用于排版数字和单位，遵循国际单位制（SI）的规则
+
+% >>> 行间距调整 >>>
+
+%\setlength{\parskip}{1.0\baselineskip}
+% 调整段落间距为1.0x基本行距
+
+\linespread{1.25}
+% 调整段落内部行间距为1.25x
+
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=0.2\baselineskip,parsep=0pt,leftmargin=2\parindent}
+% 调整enumerate行间距
+% itemsep 是 enumitem 宏包中用于控制列表项之间垂直距离的参数。它可以接受任何有效的 LaTeX 长度值，比如 pt（磅）、mm（毫米）、cm（厘米）、in（英寸）等。例如，你可以将 itemsep 设置为 5pt 或 0.5cm。你也可以使用相对长度单位，比如 \baselineskip（基础行距）和 \parskip（段落间距）。例如，你可以将 itemsep 设置为 \baselineskip 或 0.5\parskip。
+
+% >>> 图片插入支持 >>>
 
 \usepackage{graphicx}
 \usepackage{graphics}
@@ -31,19 +53,41 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage[export]{adjustbox}
-% 图片插入支持
 
-\graphicspath{{figures/}}
+\renewcommand{\figurename}{Fig}
+% 将图表标题中的“图”改为“Fig”
+\renewcommand{\tablename}{Table}
+% 将图表标题中的“图”改为“Fig”
+\captionsetup[figure]{labelsep=period}
+% 将图表标题中的冒号替换为标点
+% {none:null, colon:冒号, period, space, quad, newline}
+\captionsetup[table]{labelsep=period}
+% 将图表标题中的冒号替换为标点
+% {none:null, colon:冒号, period, space, quad, newline}
+
+
+\graphicspath{{images/}}
 % 指定默认的图形路径
+
+% >>> 表格环境支持  >>>
+
+\usepackage{multirow}
+% 可以给表格合并单元格
+\usepackage{tabularx}
+% 可以自动调整列宽的表格环境
+\usepackage{array}
+% 设置新的列类型
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+% 定义一个新的列类型，比如 C，来表示居中对齐的列
+
+% >>> 代码环境支持  >>>
 
 \usepackage{listings}
 % 代码环境宏包，提供类似IDE的显示配置
 \usepackage{xcolor}
 % 颜色宏包，给显示提供更多的颜色配置
 
-%\usepackage[sort&compress]{gbt7714}
-
-%>>> listings setting >>>
+% listings setting
 % Monokai代码风格
 \lstdefinestyle{monokai}{
 	backgroundcolor=\color{gray!5},
@@ -60,3 +104,8 @@
 	captionpos=t,
 	tabsize=4
 }
+
+% >>> 参考文献环境设置  >>>
+
+%\usepackage[sort&compress]{gbt7714}
+% gbt-7714格式的参考文献

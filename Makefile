@@ -8,7 +8,7 @@ SRC = document.tex
 OUT = document.pdf
 
 # Define the intermediate files
-INT = document.aux document.log document.synctex.gz
+INT = document.aux document.log document.synctex.gz document.fdb_latexmk document.fls 'document.synctex(busy)'
 
 # Define the default target
 all: $(OUT)
