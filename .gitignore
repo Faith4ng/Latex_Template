@@ -6,3 +6,4 @@ document.fdb_latexmk
 document.fls
 missfont.log
 document.synctex(busy)
+document.bbl
